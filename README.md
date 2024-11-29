@@ -1,70 +1,39 @@
-# GitHub Codespaces ♥️ React
 
-Welcome to your shiny new Codespace running React! We've got everything fired up and running for you to explore React.
+# Asistente virtual
+Este repositorio es el código para el video del Asistente Virtual en el canal Ringa Tech:
+https://youtu.be/-0tIy8wWtzE
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
+## Configuración
+Para ejecutar el proyecto es necesario:
+- Descargar el repositorio
+- Opcional: Crea un ambiente virtual
+- Instala las dependencias ejecutando 
+	- ```  pip install -r requirements.txt ```
+- Crea un archivo llamado ```.env```
+	- En el archivo coloca las llaves. Para el proyecto tal cual del video (y este repositorio) estoy utilizando:
+	- ```OPENAI_API_KEY=XXXXXX```
+	- ```ELEVENLABS_API_KEY=XXXXXX```
+	- ```WEATHER_API_KEY=XXXXXX```
 
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
+## Ajustes
+El proyecto cuenta con algunas cosas que quizá quieras modificar, por ejemplo:
 
-This project was bootstrapped for you with [Vite](https://vitejs.dev/).
+- En la clase LLM puedes modificar para que el asistente no sea "malhablado". Se utiliza en 2 lugares del archivo.
+- En la clase PcCommand, abre Chrome buscándolo en una ruta fija para Windows. Puedes modificarlo para que busque el ejecutable en Mac / Linux.
 
-## Available Scripts
+## Ejecución
+- Este proyecto utiliza Flask. Puedes levantar el servidor en modo debug por defecto en el puerto 5000 con el comando
+	- ```flask --app app run --debug```
+	- En tu navegador ve a http://localhost:5000
+	- Da clic para comenzar a grabar (pedirá permiso). Dar clic para dejar de grabar
+	- Espera y ve como domina al mundo
 
-In the project directory, you can run:
 
-### `npm start`
+## ¿Problemas?
 
-We've already run this for you in the `Codespaces: server` terminal window below. If you need to stop the server for any reason you can just run `npm start` again to bring it back online.
+Solo lo probé en mi equipo así que si tienes problemas, levanta un issue aquí en Github, con el mayor detalle que puedas (versión de python, de paquetes, mensaje completo de error, etc).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000/](http://localhost:3000/) in the built-in Simple Browser (`Cmd/Ctrl + Shift + P > Simple Browser: Show`) to view your running application.
+Si eres ninja y lo solucionas, ¡levanta un Pull Request!
 
-The page will reload automatically when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-## Learn More
-
-You can learn more in the [Vite documentation](https://vitejs.dev/guide/).
-
-To learn Vitest, a Vite-native testing framework, go to [Vitest documentation](https://vitest.dev/guide/)
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://sambitsahoo.com/blog/vite-code-splitting-that-works.html](https://sambitsahoo.com/blog/vite-code-splitting-that-works.html)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://github.com/btd/rollup-plugin-visualizer#rollup-plugin-visualizer](https://github.com/btd/rollup-plugin-visualizer#rollup-plugin-visualizer)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://dev.to/hamdankhan364/simplifying-progressive-web-app-pwa-development-with-vite-a-beginners-guide-38cf](https://dev.to/hamdankhan364/simplifying-progressive-web-app-pwa-development-with-vite-a-beginners-guide-38cf)
-
-### Advanced Configuration
-
-This section has moved here: [https://vitejs.dev/guide/build.html#advanced-base-options](https://vitejs.dev/guide/build.html#advanced-base-options)
-
-### Deployment
-
-This section has moved here: [https://vitejs.dev/guide/build.html](https://vitejs.dev/guide/build.html)
-
-### Troubleshooting
-
-This section has moved here: [https://vitejs.dev/guide/troubleshooting.html](https://vitejs.dev/guide/troubleshooting.html)
+## Licencias
+- Imagen de micrófono por Freepik
